@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lightbox</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="m-box1">
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=2102342279,1337758490&fm=253&fmt=auto&app=120&f=JPEG?w=823&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=2813275054,3999599269&fm=253&fmt=auto&app=138&f=JPEG?w=625&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=273307465,3788688141&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=545651108,233411946&fm=253&fmt=auto&app=120&f=JPEG?w=690&h=460"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3187991276,561848310&fm=253&fmt=auto&app=120&f=JPEG?w=1001&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=1040079697,1334718651&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=720"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3710817302,190262883&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=569772695,2457847694&fm=253&fmt=auto&app=120&f=JPEG?w=700&h=411"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=1372088249,1164363779&fm=253&fmt=auto&app=138&f=JPEG?w=763&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3689442976,2603900635&fm=253&fmt=auto&app=120&f=JPEG?w=816&h=500"
+      />
+      <img class="bgImg" src="" />
+    </div>
+    <div class="m-box2">
+      <div class="btn" id="#c1" style="background-color: gray">1</div>
+      <div class="btn" id="#c2">2</div>
+      <div class="btn" id="#c3">3</div>
+      <div class="content" id="c1">1</div>
+      <div class="content" id="c2" style="display: none">2</div>
+      <div class="content" id="c3" style="display: none">3</div>
+    </div>
+    <div class="m-box3">
+      <div class="el-box">
+        <div class="el">
+          <span class="id">0 </span><span class="block"></span
+          ><span class="del">Delete</span>
+        </div>
+      </div>
+      <div class="add">添加</div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(".pictures").bind("click", function () {
+    $(".bgImg").css("display", "block");
+    $(".bgImg").attr("src", $(this)[0].src);
+  });
+  $(".bgImg").bind("click", function () {
+    $(".bgImg").css("display", "none");
+  });
+
+  $(".btn").bind("click", function () {
+    $(".content").css("display", "none");
+    $(".btn").css("background-color", "white");
+    $(this).css("background-color", "gray");
+    $($(this)[0].id).css("display", "flex");
+  });
+  var count = 0;
+  $(".add").bind("click", function () {
+    $(".el-box").append(
+      "<div class='el'><span class='id'>" +
+        ++count +
+        "</span><span class='block'></span><span class='del'>Delete</span></div>"
+    );
+  });
+  $(".el-box").on("click", ".del", function () {
+    $(".el").last().remove();
+    count--;
+  });
+</script>

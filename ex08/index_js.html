@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lightbox</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="m-box1">
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=2102342279,1337758490&fm=253&fmt=auto&app=120&f=JPEG?w=823&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=2813275054,3999599269&fm=253&fmt=auto&app=138&f=JPEG?w=625&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=273307465,3788688141&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=545651108,233411946&fm=253&fmt=auto&app=120&f=JPEG?w=690&h=460"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3187991276,561848310&fm=253&fmt=auto&app=120&f=JPEG?w=1001&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=1040079697,1334718651&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=720"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3710817302,190262883&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=569772695,2457847694&fm=253&fmt=auto&app=120&f=JPEG?w=700&h=411"
+      />
+      <img
+        class="pictures"
+        src="https://img1.baidu.com/it/u=1372088249,1164363779&fm=253&fmt=auto&app=138&f=JPEG?w=763&h=500"
+      />
+      <img
+        class="pictures"
+        src="https://img0.baidu.com/it/u=3689442976,2603900635&fm=253&fmt=auto&app=120&f=JPEG?w=816&h=500"
+      />
+      <img class="bgImg" src="" />
+    </div>
+    <div class="m-box2">
+      <div class="btn" style="background-color: gray">1</div>
+      <div class="btn">2</div>
+      <div class="btn">3</div>
+      <div class="content" id="1">1</div>
+      <div class="content" id="2" style="display: none">2</div>
+      <div class="content" id="3" style="display: none">3</div>
+    </div>
+    <div class="m-box3">
+      <div class="el-box">
+        <div class="el">
+          <span class="id">0 </span><span class="block"></span
+          ><span class="del">Delete</span>
+        </div>
+      </div>
+      <div class="add">添加</div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var pictures = document.getElementsByClassName("pictures");
+  var bgImg = document.getElementsByClassName("bgImg")[0];
+  var btn = document.getElementsByClassName("btn");
+  var contents = document.getElementsByClassName("content");
+  var del = document.getElementsByClassName("del");
+  for (let index = 0; index < pictures.length; index++) {
+    const element = pictures[index];
+    element.addEventListener("click", function () {
+      bgImg.setAttribute("src", this.getAttribute("src"));
+      bgImg.style.display = "block";
+    });
+  }
+  bgImg.addEventListener("click", function () {
+    bgImg.style.display = "none";
+  });
+
+  for (let index = 0; index < btn.length; index++) {
+    const element = btn[index];
+    element.addEventListener("click", function () {
+      for (let index = 0; index < contents.length; index++) {
+        const element = contents[index];
+        element.style.display = "none";
+      }
+      document.getElementById(this.innerText).style.display = "flex";
+      for (let index = 0; index < btn.length; index++) {
+        const element = btn[index];
+        element.style.backgroundColor = "white";
+      }
+      element.style.backgroundColor = "gray";
+    });
+  }
+
+  var count = 0;
+  document
+    .getElementsByClassName("add")[0]
+    .addEventListener("click", function () {
+      var el = document.createElement("div");
+      el.setAttribute("class", "el");
+      el.innerHTML =
+        "<span class='id'>" +
+        ++count +
+        "</span><span class='block'></span><span class='del'>Delete</span>";
+      document.getElementsByClassName("el-box")[0].appendChild(el);
+    });
+  document
+    .getElementsByClassName("el-box")[0]
+    .addEventListener("click", function (e) {
+      if (e.target.innerText == "Delete") {
+        document
+          .getElementsByClassName("el")
+          [document.getElementsByClassName("el").length - 1].remove();
+        count--;
+      }
+    });
+</script>

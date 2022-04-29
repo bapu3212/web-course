@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.m-box1 {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pictures {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
+.bgImg {
+  display: none;
+  height: 80%;
+  position: absolute;
+  margin-left: auto;
+  margin-top: auto;
+}
+.m-box2 {
+  width: 700px;
+  height: 450px;
+  margin: 20px auto;
+}
+.btn {
+  width: 100px;
+  height: 50px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.content {
+  width: 100%;
+  height: 400px;
+  background-color: gray;
+  float: left;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m-box3 {
+  width: 700px;
+  height: 470px;
+  margin: 20px auto;
+}
+.el {
+  height: 40px;
+}
+.id {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 2px solid #000;
+}
+.block {
+  width: 600px;
+  height: 30px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  float: left;
+}
+.del {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 2px solid #000;
+}
+.add {
+  width: 70px;
+  height: 35px;
+  float: right;
+  background-color: #138628;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,132 @@
+body {
+  width: 990px;
+  padding: 20px;
+  font-weight: bolder;
+}
+a {
+  color: #002cbd;
+}
+.m-tl .m-tab {
+  padding: 3px 0;
+}
+.m-tl .m-tab span {
+  background-color: #336699;
+  color: #fff;
+  padding: 4px 19px 8px;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+  font-size: 13px;
+}
+.m-tl .m-tip span {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 15px;
+  border-radius: 3px;
+  text-align: center;
+}
+.m-tl .m-fun a {
+  border: 1px solid #ccc;
+  padding: 4px 11px;
+  font-size: 15px;
+  border-radius: 3px;
+  text-align: center;
+}
+.m-tl {
+  border-bottom: 5px solid #336699;
+}
+.m-tl2,
+.m-tl3 {
+  background-color: #fafafa;
+  padding: 2px 7px;
+  border-left: 2px solid #cbcbcb;
+  border-right: 2px solid #cbcbcb;
+  font-size: 15px;
+}
+.m-tl4 {
+  font-size: 15px;
+  background-color: #fffbde;
+  border: 2px solid #cbcbcb;
+  padding: 4px 0;
+}
+.m-f {
+  margin-top: 6px;
+}
+.m-f .ui-grid-3 {
+  width: 100px;
+}
+.m-f div {
+  background-color: #cedce8;
+  margin-right: 2px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  color: #607a90;
+}
+.m-a1 {
+  background-color: #f2f2f2f2;
+  margin-top: 2px;
+  text-align: center;
+  border-left: 2px solid #bbbbbb;
+  border-right: 2px solid #bbbbbb;
+  border-bottom: 2px solid #bbbbbb;
+}
+.m-a1 .ui-grid-12 {
+  font-size: 22px;
+  padding: 3px;
+}
+.m-a1 .ui-grid-2 {
+  padding: 9px 0;
+  font-size: 14px;
+  float: right;
+}
+.m-b1 {
+  text-align: center;
+}
+.m-b1 .ui-grid-4 {
+  padding: 8px 0;
+  font-size: 15px;
+}
+.m-b1 .ui-grid-3 {
+  width: 100px;
+  border-left: 2px solid #bbbbbb;
+}
+.m-b1 .p2 {
+  font-size: 20px;
+  line-height: 61px;
+}
+.m-b1 .p3,
+.m-b1 .p1 {
+  font-size: 15px;
+  padding: 8px 0;
+}
+.m-b1 .p4 {
+  font-size: 15px;
+  padding: 19.25px 0;
+}
+.m-b1 .ui-grid-8 {
+  font-size: 15px;
+  padding: 8px 0;
+  color: #0069a3;
+}
+.m-a2 {
+  background-color: #f2f2f2f2;
+  text-align: center;
+  border: 2px solid #bbbbbb;
+}
+.m-a2 .ui-grid-12 {
+  font-size: 22px;
+  padding: 15px;
+}
+.m-a2 .ui-grid-2 {
+  padding: 20px 0;
+  font-size: 15px;
+}
+.m-a2 .ui-grid-5 {
+  padding: 10px 13px;
+  font-size: 14px;
+  float: right;
+}
+.m-a2 a {
+  margin: 0 3px;
+}

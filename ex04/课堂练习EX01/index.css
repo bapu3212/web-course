@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+div {
+  height: 50px;
+  background-color: dimgray;
+}
+.hr {
+  height: 2px;
+  background-color: dimgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

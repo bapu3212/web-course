@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.m-index {
+  width: 1270px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gray;
+}
+.goods {
+  width: 390px;
+  height: 370px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #336699;
+}
+img {
+  flex-grow: 1;
+}
+.g-message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: pink;
+}
+.title,
+.message {
+  width: 370px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.price {
+  width: 370px;
+  height: 30px;
+  background-color: #fff;
+}
